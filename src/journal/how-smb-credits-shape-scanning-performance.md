@@ -1,7 +1,7 @@
 ---
 title: How SMB credits shape the performance of network scanning
-date: 2026-10-07
-displayDate: October 2026
+date: 2026-08-01
+displayDate: August 2026
 summary: What I learned by working from the public go-smb2 client, following its request and credit paths, and tuning the boundary between SMB protocol flow control and a scanning workload.
 topics: SMB, Go, Storage systems, Network protocols, Performance engineering
 ---
