@@ -1,0 +1,183 @@
+\documentclass[a4paper,9pt]{article}
+
+\usepackage{parskip}
+\usepackage{fontspec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[scale=0.91, top=.42in, bottom=.42in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{array}
+
+\setmainfont{Arial}
+\pagestyle{empty}
+
+\definecolor{dark}{HTML}{110223}
+\color{dark}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=dark,
+    linkcolor=dark
+}
+
+\titleformat{\section}
+  {\large\raggedright\bfseries}
+  {}{0em}{}[\titlerule]
+
+\titlespacing{\section}{0pt}{5pt}{3pt}
+
+\setlist[itemize]{
+    leftmargin=1.1em,
+    nosep,
+    itemsep=2pt,
+    topsep=1pt
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+% ================= HEADER =================
+
+\begin{center}
+    {\Huge \textbf{Anfa Majid}}\\[5pt]
+
+    \faEnvelope\ 
+    \href{mailto:anfamajid@hotmail.com}{anfamajid@hotmail.com}
+    \quad
+    \faMobile\ (+92) 333-2404665
+    \quad
+    \faLinkedin\ \href{https://www.linkedin.com/in/anfamajid}{anfamajid}
+    \quad
+    \faGithub\ \href{https://github.com/anfa-majid}{anfa-majid}
+\end{center}
+
+% ================= EDUCATION =================
+
+\section{EDUCATION}
+
+\begin{tabularx}{\linewidth}{@{}L r@{}}
+\textbf{Institute of Business Administration (IBA), Karachi}
+& \textbf{2021 -- 2025} \\
+
+BS Computer Science
+& \textit{CGPA: 3.37/4.0}
+\end{tabularx}
+
+% ================= RESEARCH =================
+
+\section{RESEARCH EXPERIENCE}
+
+\begin{tabularx}{\linewidth}{@{}L r@{}} \textbf{When Equal Forecast Errors Lead to Unequal Outcomes: Error Semantics in Kubernetes Autoscaling} & \textbf{2026} \\ \textit{Independent Research -- Research Manuscript} & \href{https://github.com/anfa-majid/forecast-error-semantics-kubernetes-autoscaling}{\textit{GitHub}} \\[-2pt] \end{tabularx}
+
+\begin{itemize}
+    \item Investigated why forecasts with matched \textbf{MAE and RMSE} can produce different Kubernetes autoscaling outcomes due to forecast error semantics, including error direction, timing, event structure, transition alignment, shape, and displacement.
+
+    \item Designed and implemented a reproducible \textbf{three-node K3s experimental framework} with a deterministic predictive autoscaler, CPU-controlled HTTP workload, controlled forecast traces, and instrumentation spanning replica decisions, Deployment state, Pod readiness, service endpoints, and request-level performance.
+
+    \item Conducted controlled experiments using \textbf{14 forecast traces organized into seven matched-error pairs}, with eight repetition blocks per pair, isolating semantic differences while holding aggregate forecast accuracy approximately constant.
+
+    \item Demonstrated that accuracy-matched forecast errors can diverge operationally: on a narrow-spike workload, a missed peak produced \textbf{180 additional deficient command-replica-seconds} and substantially higher request P99 and SLO-violation duration than an equally sized false peak.
+\end{itemize}
+
+% ================= EXPERIENCE =================
+
+\section{EXPERIENCE}
+
+\begin{tabularx}{\linewidth}{@{}L r@{}}
+\textbf{Associate Software Development Engineer -- Veeam}
+& \textbf{June 2025 -- Present} \\
+\textit{Karachi, Pakistan}
+&
+\end{tabularx}
+
+\begin{itemize}
+    \item Replaced a kernel-mount SMB connector with a custom \textbf{gosmb2} fork supporting Kerberos and NTLM authentication, doubling L1 scan throughput from 3M to \textbf{6M files/hour} and reducing per-million-file inventory time from \textbf{40 to 21 minutes}.
+
+    \item Designed and implemented \textbf{stateless backend services} for connectors on AWS Outposts, enabling ephemeral per-scan Kubernetes pods and horizontal scaling across HDFS, NetApp, Azure Blob, NFS, and SMB storage backends.
+
+    \item Engineered production-grade IaaS connectors for \textbf{AWS, Azure, GCP, and OCI} in Golang, enabling automated data compliance scanning across heterogeneous multi-cloud enterprise environments.
+
+    \item Built the NetApp entitlement data layer to extract \textbf{file-level ACLs, user/group permissions, appliance groups, and Active Directory memberships}, and developed a Databricks pipeline to normalize entitlement data into a unified access inventory.
+
+    \item Consolidated per-connector Docker images into a shared base image with \textbf{runtime dispatch}, reducing redundant appliance loads and improving deployment efficiency across storage backends.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{@{}L r@{}}
+\textbf{Backend Intern -- Securiti.ai}
+& \textbf{Jun 2024 -- Aug 2024} \\
+\textit{Karachi, Pakistan}
+&
+\end{tabularx}
+
+\begin{itemize}
+    \item Prototyped an AI-powered marketing review tool with video preprocessing, model serving, and MinIO storage; containerized the system using Docker.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{@{}L r@{}}
+\textbf{Software Engineering Intern -- Bitnine Global}
+& \textbf{Mar 2024 -- May 2024} \\
+\textit{Remote}
+&
+\end{tabularx}
+
+\begin{itemize}
+    \item Contributed to \textbf{Apache AGE}, a PostgreSQL graph extension, through bug fixes, documentation, and feature development in collaboration with core maintainers.
+\end{itemize}
+
+% ================= SELECTED PROJECTS =================
+
+\section{SELECTED PROJECTS}
+
+\begin{tabularx}{\linewidth}{@{}L r@{}}
+\textbf{NeuralTrace -- Multimodal AI for Memory Assistance}
+&
+\\[-2pt]
+\end{tabularx}
+
+\begin{itemize}
+    \item Developed a \textbf{FastAPI/PostgreSQL backend} supporting asynchronous ML inference, semantic vector retrieval, caregiver geofencing, and real-time alerts for a memory-assistance application.
+
+    \item Implemented a multimodal perception pipeline combining \textbf{YOLOv8 and ResNet-50}, achieving 84\% indoor scene classification accuracy through feature fusion and co-occurrence analysis.
+
+    \item Implemented privacy-preserving semantic logging and FAISS-backed vector retrieval, achieving \textbf{sub-200ms retrieval latency} and 92.2\% transcription accuracy.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{@{}L r@{}}
+\textbf{Generic Multi-Source Lakehouse Pipeline}
+&
+\\[-2pt]
+\end{tabularx}
+
+\begin{itemize}
+    \item Designed a metadata-driven \textbf{Databricks Lakehouse} pipeline ingesting batch and streaming data from S3, SMB, and Excel using Medallion Architecture, incremental scans, and schema auto-discovery.
+
+    \item Replaced source-specific hardcoding with a runtime metadata store supporting type casting, normalization, and canonical schema mapping across heterogeneous data sources.
+\end{itemize}
+
+% ================= TECHNICAL SKILLS =================
+
+\section{TECHNICAL SKILLS}
+
+\begin{itemize}
+    \item \textbf{Languages:} Go, Python, Java, SQL
+    \item \textbf{Systems:} Kubernetes, Docker, Linux, REST APIs, Distributed Systems
+    \item \textbf{Cloud:} AWS, Azure, GCP, OCI
+    \item \textbf{Data:} PostgreSQL, MongoDB, Kafka, Hadoop, Spark, Databricks, Airflow
+    \item \textbf{Storage:} S3, SMB, NFS, HDFS, NetApp, MinIO
+\end{itemize}
+
+% ================= LEADERSHIP =================
+
+\section{LEADERSHIP}
+
+\begin{itemize}
+    \item Executive Assistant, IBA Karachi; Advisor, IBA Data Science Society
+    \item Head of Department, IBA Computer Science Society \& IBA Arts and Photography Society
+    \item Client Manager, IBA Public Speaking Society
+\end{itemize}
+
+\end{document}
