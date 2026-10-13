@@ -10,7 +10,7 @@ Working with Go-based backend services has made me think differently about depen
 
 The interesting part is everything surrounding that version change. Is the release compatible with the application? Does it change another selected module? Does it require a newer Go toolchain? And if the library becomes difficult to maintain, how much of the application actually depends on its behavior?
 
-I have written separately about [how Go modules actually work](/journal/how-go-modules-actually-work), including module checksums, private modules, and reproducible builds. Here I want to focus on a different question: **what does it mean to maintain a dependency over time, rather than simply resolve it for a build?**
+I have written separately about [how Go modules actually work](https://anfa-majid.github.io/#/journal/how-go-modules-actually-work), including module checksums, private modules, and reproducible builds. Here I want to focus on a different question: **what does it mean to maintain a dependency over time, rather than simply resolve it for a build?**
 
 ## A release version and a selected version are different things
 
