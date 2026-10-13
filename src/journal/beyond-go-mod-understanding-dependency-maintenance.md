@@ -101,7 +101,7 @@ Both might be ordinary entries in a module file. Both might have a version that 
 
 This is why I find the phrase “outdated dependency” incomplete on its own. The age of a release is useful information, but a maintenance decision also depends on how the application uses the library. Likewise, a current version does not automatically make a library safe, and an old version does not automatically prove that replacing it is urgent.
 
-A useful review starts with straightforward checks—selected version, release notes, tests, known vulnerabilities—but should also ask which behavior the application depends on and how difficult it would be to move away from that behavior.
+A useful review starts with straightforward checks: selected version, release notes, tests, and known vulnerabilities. But it should also ask which behavior the application depends on and how difficult it would be to move away from that behavior.
 
 ## When maintenance stops: a connection to dependency-abandonment research
 
